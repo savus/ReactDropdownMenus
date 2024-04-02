@@ -1,6 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 export const DropdownMenu = () => {
+  const [activeMenu, setActiveMenu] = useState("main");
+
   const DropdownItem = ({
     children,
     leftIcon,
@@ -13,22 +15,27 @@ export const DropdownMenu = () => {
     return (
       <a href="#" className="menu-item">
         {leftIcon !== "" && (
-          <span className="icon-button">
-            <i className={leftIcon}></i>
+          <span className="icon-button left">
+            <i className={`${leftIcon}`}></i>
           </span>
         )}
-
         {children}
-        <span>
-          <i className={rightIcon}></i>
-        </span>
+        {rightIcon !== "" && (
+          <span className="icon-button right">
+            <i className={`${rightIcon}`}></i>
+          </span>
+        )}
       </a>
     );
   };
+
   return (
     <div className="dropdown">
-      <DropdownItem leftIcon="" rightIcon="">
+      <DropdownItem leftIcon="fa-solid fa-user" rightIcon="">
         My Profile
+      </DropdownItem>
+      <DropdownItem leftIcon="fa-solid fa-gear" rightIcon="">
+        Settings
       </DropdownItem>
     </div>
   );
