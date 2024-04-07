@@ -12,8 +12,8 @@ export const NavItem = ({
     <li className="nav-item">
       <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         <i className={icon}></i>
-        {children}
       </a>
+      {children}
     </li>
   );
 };

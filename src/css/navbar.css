@@ -29,9 +29,12 @@
 }
 
 .navbar .menu-item {
-  padding: 1px;
-  height: 50px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
+
 .navbar .menu-item:hover {
   background-color: var(--bg-accent);
 }
