@@ -1,0 +1,37 @@
+.navbar {
+  width: 100%;
+  height: var(--nav-size);
+  background-color: #000;
+}
+
+.navbar .navbar-nav {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar .nav-item {
+  width: calc(var(--nav-size) * 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .dropdown {
+  background-color: var(--bg-color);
+  position: absolute;
+  top: calc(var(--nav-size) - 2px);
+  width: 300px;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transform: translateX(-45%);
+}
+
+.navbar .menu-item {
+  padding: 1px;
+  height: 50px;
+}
+.navbar .menu-item:hover {
+  background-color: var(--bg-accent);
+}
