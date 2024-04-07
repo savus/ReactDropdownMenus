@@ -28,11 +28,25 @@
   transform: translateX(-45%);
 }
 
+.navbar .dropdown ul {
+  background-color: #000;
+  transition: transform var(--transition-speed);
+}
+
+.navbar .dropdown ul.primary-menu {
+  transform: translateX(-110%);
+}
+
+.navbar .dropdown ul.primary-menu.active {
+  transform: translateX(0);
+}
+
 .navbar .menu-item {
   padding: 0.5rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  transition: background-color var(--transition-speed);
 }
 
 .navbar .menu-item:hover {
