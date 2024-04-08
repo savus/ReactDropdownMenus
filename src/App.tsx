@@ -18,20 +18,7 @@ function App() {
           <></>
         </NavItem>
         <NavItem icon="fa-solid fa-chevron-down">
-          <DropdownMenu menuClass="primary-menu">
-            <DropdownItem leftIcon="fa-solid fa-user" rightIcon="">
-              Profile
-            </DropdownItem>
-            <DropdownItem leftIcon="fa-solid fa-gear" rightIcon="">
-              Settings
-            </DropdownItem>
-            <DropdownItem leftIcon="fa-solid fa-palette" rightIcon="">
-              Gallery
-            </DropdownItem>
-            <DropdownItem leftIcon="fa-solid fa-backward" rightIcon="">
-              Other
-            </DropdownItem>
-          </DropdownMenu>
+          <DropdownMenu></DropdownMenu>
         </NavItem>
       </Navbar>
     </>

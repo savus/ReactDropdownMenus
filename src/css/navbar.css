@@ -23,22 +23,28 @@
   position: absolute;
   top: calc(var(--nav-size) - 2px);
   width: 300px;
-  padding: 1rem;
   border-radius: var(--border-radius);
-  transform: translateX(-45%);
+  transform: translateX(-50%);
+  height: 210px;
 }
 
 .navbar .dropdown ul {
+  --right: -100%;
   background-color: #000;
-  transition: transform var(--transition-speed);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  transition: right var(--transition-speed) ease;
+  right: var(--right);
 }
 
-.navbar .dropdown ul.primary-menu {
-  transform: translateX(-110%);
+.navbar .dropdown ul.active {
+  --right: 0;
 }
 
-.navbar .dropdown ul.primary-menu.active {
-  transform: translateX(0);
+.navbar .dropdown ul.standby {
+  --right: 100%;
 }
 
 .navbar .menu-item {
