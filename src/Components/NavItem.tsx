@@ -13,7 +13,7 @@ export const NavItem = ({
       <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         <i className={icon}></i>
       </a>
-      {children}
+      <div className={`dropdown ${open ? "active" : ""}`}>{children}</div>
     </li>
   );
 };
