@@ -1,5 +1,6 @@
 import { DropdownItem } from "./Components/DropdownItem";
 import { DropdownMenu } from "./Components/DropdownMenu";
+import { Header } from "./Components/Header";
 import { NavItem } from "./Components/NavItem";
 import { Navbar } from "./Components/Navbar";
 import "./css/index.css";
@@ -21,6 +22,7 @@ function App() {
           <DropdownMenu></DropdownMenu>
         </NavItem>
       </Navbar>
+      <Header />
     </>
   );
 }
