@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  color: black;
 }
 
 .header {
@@ -21,10 +22,32 @@ body {
   padding: 0;
 }
 
+.dropdown > .link:focus,
 .link:hover {
   color: black;
 }
 
 .dropdown {
   position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  color: black;
+  left: 0;
+  top: calc(100% + 0.35rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.dropdown > .link:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
