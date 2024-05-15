@@ -1,3 +1,8 @@
+:root {
+  --header-height: 60px;
+  --transition-duration: 250ms;
+}
+
 body {
   margin: 0;
   color: black;
@@ -6,9 +11,10 @@ body {
 .header {
   background-color: #f3f3f3;
   display: flex;
-  align-items: baseline;
-  padding: 0.5rem;
+  align-items: center;
+  height: var(--header-height);
   gap: 1rem;
+  padding: 0 0.5rem;
 }
 
 .link {
@@ -50,4 +56,62 @@ body {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.practice-dropdown {
+  position: relative;
+  height: 100%;
+}
+
+.practice-dropdown .dropdown-button {
+  all: unset;
+  color: #656565;
+}
+
+.practice-dropdown .dropdown-button:hover,
+.practice-dropdown .products-header,
+.practice-dropdown .item-list a,
+.practice-dropdown.active .dropdown-button {
+  color: #000;
+}
+
+.practice-dropdown .practice-dropdown-menu {
+  position: absolute;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  top: 40px;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform var(--transition-duration) ease-in-out,
+    opacity var(--transition-duration) ease-in-out;
+}
+
+.practice-dropdown.active .practice-dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.practice-dropdown.active .item-list a {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.practice-dropdown.active .item-list a:hover {
+  color: #888;
 }
