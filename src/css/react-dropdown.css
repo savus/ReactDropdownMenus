@@ -1,0 +1,31 @@
+.react-dropdown {
+  position: relative;
+}
+
+.react-dropdown-button {
+  all: unset;
+  color: #676767;
+  cursor: pointer;
+}
+
+.react-dropdown-button:hover {
+  color: #262626;
+}
+
+.react-dropdown-menu {
+  position: absolute;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  top: var(--header-height);
+  transition: opacity var(--transition-duration) ease-in-out,
+    transform var(--transition-duration) ease-in-out;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.react-dropdown.active .react-dropdown-button + .react-dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
