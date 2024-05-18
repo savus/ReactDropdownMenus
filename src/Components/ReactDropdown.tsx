@@ -1,31 +1,34 @@
-import { useState } from "react";
 import "../css/react-dropdown.css";
-import { TActiveTabState } from "./Header";
+import {
+  TActiveTabState,
+  useActiveTabState,
+} from "./Providers/ActiveTabStateProvider";
 
 export function ReactDropdown({
-  activeTabState,
-  setActiveTabState,
+  dropdownState,
 }: {
-  activeTabState: TActiveTabState;
-  setActiveTabState: (state: TActiveTabState) => void;
+  dropdownState: TActiveTabState;
 }) {
+  const { activeTabState, setActiveTabState } = useActiveTabState();
+  const isStateActive = () =>
+    dropdownState === activeTabState ? "active" : "";
+  const toggleActiveTab = () =>
+    activeTabState === dropdownState
+      ? setActiveTabState("none")
+      : setActiveTabState(dropdownState);
   return (
     <>
-      <div
-        className={`react-dropdown ${
-          activeTabState === "react-dropdown" ? "active" : ""
-        }`}
-      >
+      <div className={`react-dropdown ${isStateActive()}`}>
         <button
+          data-react-dropdown-button
           className="react-dropdown-button"
           onClick={() => {
-            if (activeTabState === "none") setActiveTabState("react-dropdown");
-            else setActiveTabState("none");
+            toggleActiveTab();
           }}
         >
           React Dropdown
         </button>
-        <div className="react-dropdown-menu">
+        <div className="react-dropdown-menu" data-react-dropdown-menu>
           <div className="react-header">React Products</div>
           <ul className="item-list">
             <li>

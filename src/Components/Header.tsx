@@ -1,17 +1,9 @@
-import { useState } from "react";
 import "../css/header.css";
 import { ReactDropdown } from "./ReactDropdown";
 
-export type TActiveTabState = "none" | "react-dropdown";
 export function Header() {
-  const [activeTabState, setActiveTabState] = useState<TActiveTabState>("none");
   return (
-    <div
-      className="header"
-      onClick={() => {
-        if (activeTabState !== "none") setActiveTabState("none");
-      }}
-    >
+    <div className="header">
       <div className="dropdown" data-dropdown>
         <button className="link" data-dropdown-button>
           Information
@@ -104,12 +96,7 @@ export function Header() {
           </div>
         </div>
       </a>
-      <ReactDropdown
-        activeTabState={activeTabState}
-        setActiveTabState={(activeTabState) => {
-          setActiveTabState(activeTabState);
-        }}
-      />
+      <ReactDropdown dropdownState="react-dropdown" />
     </div>
   );
 }
