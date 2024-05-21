@@ -21,7 +21,7 @@ export const ActiveTabStateProvider = ({
       <div
         className="page-container"
         onClick={(e) => {
-          const target = e.target;
+          const target = e.target as HTMLButtonElement;
           const isDropdownButton = target.matches(
             "[data-react-dropdown-button]"
           );
