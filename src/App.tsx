@@ -117,15 +117,47 @@ function App() {
       </header>
       <section className="menu-slider-container container container-lg">
         <h3>Menu Slider</h3>
-        <div className="silder-menu">
-          <div className="menu-title">Title</div>
-          <ul className="menu-list">
-            <li className="menu-item">
-              <a href="#" className="menu-link">
-                Link 1
-              </a>
-            </li>
-          </ul>
+        <div className="slider">
+          <div className="silder-menu">
+            <div className="menu-title">Title</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link">
+                  Link 1
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="silder-menu">
+            <div className="menu-title">Title</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link">
+                  Link 1
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="silder-menu">
+            <div className="menu-title">Title</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link">
+                  Link 1
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="silder-menu">
+            <div className="menu-title">Title</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link">
+                  Link 1
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="slider-btns">
           <button>Left</button>
