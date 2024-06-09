@@ -30,14 +30,27 @@ function App() {
         <nav className="navbar">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <div className="dropdown" data-dropdown>
+              <div className="dropdown active" data-dropdown>
                 <a href="#" className="dropdown-button" data-dropdown-button>
                   Menu 1
                 </a>
                 <div className="dropdown-menu" data-dropdown-menu>
                   <ul>
                     <li>
-                      <a href="#">Submenu 1</a>
+                      <div className="dropdown active" data-dropdown>
+                        <a
+                          href="#"
+                          className="dropdown-button"
+                          data-dropdown-button
+                        >
+                          Submenu 1
+                        </a>
+                        {/* <div className="dropdown-menu" data-dropdown-menu>
+                          <ul>
+                            <li>Sub-submenu 1</li>
+                          </ul>
+                        </div> */}
+                      </div>
                     </li>
                   </ul>
                 </div>

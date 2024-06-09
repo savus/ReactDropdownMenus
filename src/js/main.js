@@ -1,26 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
     const target = e.target;
-    const dataDropdown = "[data-dropdown]";
-    const dataDropdownButton = "[data-dropdown-button]";
-    const dataDropdownMenu = "[data-dropdown-menu]";
+    const isDropdownButton = target.matches("[data-dropdown-button]");
+    const currentDropdownMenu = target.closest("[data-dropdown]");
 
-    const isDropdownButton = target.matches(dataDropdownButton);
-    const currentDropdownContainer = target.closest(dataDropdown);
-    const currentDropdownMenu = target.closest(dataDropdownMenu);
-
-    const setActive = (element, selector) => {
-      const activeElement = document.querySelector(`${selector}.active`);
-      if (activeElement !== null) activeElement.classList.remove("active");
-      element.classList.add("active");
-    };
-
-    if (!isDropdownButton && currentDropdownMenu !== null) return;
+    if (!isDropdownButton && target.closest("[data-dropdown-menu]") !== null)
+      return;
 
     if (isDropdownButton) {
-      currentDropdownContainer.classList.toggle("active");
+      currentDropdownMenu.classList.toggle("active");
     }
 
-    setActive(currentDropdownContainer, dataDropdown);
+    document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
+      if (dropdown === currentDropdownMenu) return;
+      dropdown.classList.remove("active");
+    });
   });
 });
