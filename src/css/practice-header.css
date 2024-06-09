@@ -28,7 +28,7 @@
 .practice-header
   .practice-nav-item
   [data-dropdown].active
-  [data-dropdown-button],
+  > [data-dropdown-button],
 .practice-header .practice-nav-item [data-dropdown-button]:hover {
   color: blue;
   background-color: #fff;
@@ -37,21 +37,25 @@
 .practice-header
   .practice-nav-item
   [data-dropdown].active
-  [data-dropdown-menu] {
-  user-select: none;
+  > [data-dropdown-menu] {
+  pointer-events: none;
   transform: translateY(20px);
   opacity: 1;
+  visibility: visible;
 }
 
 .practice-header [data-dropdown-menu] {
+  pointer-events: unset;
   position: absolute;
   max-width: 200px;
   background-color: #fff;
   box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   opacity: 0;
+  visibility: hidden;
   transition: transform var(--transition-speed) ease-in-out,
-    opacity var(--transition-speed) ease-in-out;
+    opacity var(--transition-speed) ease-in-out,
+    visibility var(--transition-speed) ease-in-out;
 }
 
 .practice-header [data-dropdown-menu] a {
