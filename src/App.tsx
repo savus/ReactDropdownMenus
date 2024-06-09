@@ -26,142 +26,18 @@ function App() {
         </Navbar>
         <Header />
       </TabStateProvider> */}
-      <header className="practice-header">
-        <nav className="practice-navbar">
-          <ul className="practice-navbar-nav">
-            <li className="practice-nav-item">
-              <div className="" data-dropdown>
-                <a href="#" data-dropdown-button>
-                  Link 1
+      <header>
+        <nav className="navbar">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <div className="dropdown" data-dropdown>
+                <a href="#" className="dropdown-button" data-dropdown-button>
+                  Menu 1
                 </a>
-                <div data-dropdown-menu>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 1</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 2</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 3</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className="practice-nav-item">
-              <div className="" data-dropdown>
-                <a href="#" data-dropdown-button>
-                  Link 2
-                </a>
-                <div data-dropdown-menu>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 1</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 2</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 3</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className="practice-nav-item">
-              <div className="" data-dropdown>
-                <a href="#" data-dropdown-button>
-                  Link 3
-                </a>
-                <div data-dropdown-menu>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 1</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 2</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 3</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className="practice-nav-item">
-              <div className="" data-dropdown>
-                <a href="#" data-dropdown-button>
-                  Link 4
-                </a>
-                <div data-dropdown-menu>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 1</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 2</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 3</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className="practice-nav-item">
-              <div className="" data-dropdown>
-                <a href="#" data-dropdown-button>
-                  Link 5
-                </a>
-                <div data-dropdown-menu>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 1</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 2</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 3</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 4</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li className="practice-nav-item">
-              <div className="" data-dropdown>
-                <a href="#" data-dropdown-button>
-                  Link 6
-                </a>
-                <div data-dropdown-menu>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 1</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 2</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 3</a>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <a href="#">Link 4</a>
+                <div className="dropdown-menu" data-dropdown-menu>
+                  <ul>
+                    <li>
+                      <a href="#">Submenu 1</a>
                     </li>
                   </ul>
                 </div>

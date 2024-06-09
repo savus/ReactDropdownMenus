@@ -1,63 +1,54 @@
-.practice-header {
+nav {
+  height: var(--nav-size);
   background-color: var(--bg-color);
 }
 
-.practice-header .practice-navbar {
-  height: var(--nav-size);
-  width: 100%;
-}
-
-.practice-header .practice-navbar-nav {
+.navbar-nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
+  width: 100%;
   height: 100%;
 }
 
-.practice-header .practice-nav-item [data-dropdown] {
+.nav-item {
+  color: var(--text-color);
+}
+
+[data-dropdown] {
   position: relative;
 }
 
-.practice-header .practice-nav-item [data-dropdown-button] {
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-.practice-header
-  .practice-nav-item
-  [data-dropdown].active
-  > [data-dropdown-button],
-.practice-header .practice-nav-item [data-dropdown-button]:hover {
-  color: blue;
+[data-dropdown] > [data-dropdown-button]:hover,
+[data-dropdown].active > [data-dropdown-button] {
   background-color: #fff;
+  color: #000;
 }
 
-.practice-header
-  .practice-nav-item
-  [data-dropdown].active
-  > [data-dropdown-menu] {
+[data-dropdown] > [data-dropdown-button] + [data-dropdown-menu] {
+  position: absolute;
+  transform: translateY(0);
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.1);
+  transition: opacity var(--transition-speed) ease-in-out,
+    visibility var(--transition-speed) ease-in-out,
+    transform var(--transition-speed) ease-in-out;
   pointer-events: none;
-  transform: translateY(20px);
+  visibility: 0;
+  opacity: 0;
+  width: max-content;
+}
+
+[data-dropdown].active > [data-dropdown-button] + [data-dropdown-menu] {
+  transform: translateY(30%);
+  pointer-events: auto;
   opacity: 1;
   visibility: visible;
 }
 
-.practice-header [data-dropdown-menu] {
-  pointer-events: unset;
-  position: absolute;
-  max-width: 200px;
-  background-color: #fff;
-  box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: transform var(--transition-speed) ease-in-out,
-    opacity var(--transition-speed) ease-in-out,
-    visibility var(--transition-speed) ease-in-out;
-}
-
-.practice-header [data-dropdown-menu] a {
+[data-dropdown-menu] a {
   color: #000;
 }
