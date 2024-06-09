@@ -1,0 +1,59 @@
+.practice-header {
+  background-color: var(--bg-color);
+}
+
+.practice-header .practice-navbar {
+  height: var(--nav-size);
+  width: 100%;
+}
+
+.practice-header .practice-navbar-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  height: 100%;
+}
+
+.practice-header .practice-nav-item [data-dropdown] {
+  position: relative;
+}
+
+.practice-header .practice-nav-item [data-dropdown-button] {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.practice-header
+  .practice-nav-item
+  [data-dropdown].active
+  [data-dropdown-button],
+.practice-header .practice-nav-item [data-dropdown-button]:hover {
+  color: blue;
+  background-color: #fff;
+}
+
+.practice-header
+  .practice-nav-item
+  [data-dropdown].active
+  [data-dropdown-menu] {
+  user-select: none;
+  transform: translateY(20px);
+  opacity: 1;
+}
+
+.practice-header [data-dropdown-menu] {
+  position: absolute;
+  max-width: 200px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  opacity: 0;
+  transition: transform var(--transition-speed) ease-in-out,
+    opacity var(--transition-speed) ease-in-out;
+}
+
+.practice-header [data-dropdown-menu] a {
+  color: #000;
+}
