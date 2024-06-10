@@ -40,6 +40,11 @@ function App() {
                   Apps
                 </a>
               </li>
+              <li className="menu-item">
+                <a href="#" className="menu-link" data-link="department">
+                  Department
+                </a>
+              </li>
             </ul>
           </div>
           <div className="slider-menu" data-menu="pricing">
@@ -51,7 +56,7 @@ function App() {
                 </a>
               </li>
               <li>
-                <button className="back-button" data-back-button="products">
+                <button className="menu-link" data-link="products">
                   Back to Products
                 </button>
               </li>
@@ -66,19 +71,24 @@ function App() {
                 </a>
               </li>
               <li>
-                <button className="back-button" data-back-button="products">
+                <button className="menu-link" data-link="products">
                   Back to Products
                 </button>
               </li>
             </ul>
           </div>
-          <div className="slider-menu">
-            <div className="menu-title">Title</div>
+          <div className="slider-menu" data-menu="department">
+            <div className="menu-title">Department</div>
             <ul className="menu-list">
               <li className="menu-item">
-                <a href="#" className="menu-link">
+                <a href="#" className="menu-link" data-link="link-1">
                   Link 1
                 </a>
+              </li>
+              <li>
+                <button className="menu-link" data-link="products">
+                  Back to Products
+                </button>
               </li>
             </ul>
           </div>

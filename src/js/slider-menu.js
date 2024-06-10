@@ -16,18 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuSlider.addEventListener("click", (e) => {
     const target = e.target;
-    if (target.classList.contains("menu-link")) {
-      const dataLink = target.dataset.link;
-      const sliderMenu = document.querySelector(`[data-menu="${dataLink}"]`);
-      setActive(sliderMenu, `[data-menu="${dataLink}"]`);
-    }
+    const dataLink = target.dataset.link;
+    const dataBackButton = target.dataset.backButton;
+    const selector = `data-menu`;
+    const sliderMenu = document.querySelector(`[${selector}=${dataLink}]`);
 
-    if (target.classList.contains("back-button")) {
-      const dataBackButton = target.dataset.backButton;
-      const sliderMenu = document.querySelector(
-        `[data-menu="${dataBackButton}"]`
-      );
-      setActive(sliderMenu, `[data-menu="${dataBackButton}"]`);
-    }
+    if (target.classList.contains("menu-link"))
+      setActive(sliderMenu, `[${selector}]`);
   });
 });
