@@ -1,5 +1,6 @@
 import { PracticeHeader } from "./Components/PracticeHeader";
 import "./css/index.css";
+import "./css/menu-slider.css";
 
 function App() {
   return (
@@ -24,9 +25,54 @@ function App() {
       <PracticeHeader />
 
       <section className="menu-slider-container container container-lg">
-        <h3>Menu Slider</h3>
         <div className="slider">
-          <div className="silder-menu">
+          <h3>Menu Slider</h3>
+          <div className="slider-menu active" data-menu="products">
+            <div className="menu-title">Products</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link" data-link="pricing">
+                  Pricing
+                </a>
+              </li>
+              <li className="menu-item">
+                <a href="#" className="menu-link" data-link="apps">
+                  Apps
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="slider-menu" data-menu="pricing">
+            <div className="menu-title">Pricing</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link" data-link="pricing-1">
+                  pricing-1
+                </a>
+              </li>
+              <li>
+                <button className="back-button" data-back-button="products">
+                  Back to Products
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div className="slider-menu" data-menu="apps">
+            <div className="menu-title">Apps</div>
+            <ul className="menu-list">
+              <li className="menu-item">
+                <a href="#" className="menu-link" data-link="link-1">
+                  Link 1
+                </a>
+              </li>
+              <li>
+                <button className="back-button" data-back-button="products">
+                  Back to Products
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div className="slider-menu">
             <div className="menu-title">Title</div>
             <ul className="menu-list">
               <li className="menu-item">
@@ -36,40 +82,6 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="silder-menu">
-            <div className="menu-title">Title</div>
-            <ul className="menu-list">
-              <li className="menu-item">
-                <a href="#" className="menu-link">
-                  Link 1
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="silder-menu">
-            <div className="menu-title">Title</div>
-            <ul className="menu-list">
-              <li className="menu-item">
-                <a href="#" className="menu-link">
-                  Link 1
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="silder-menu">
-            <div className="menu-title">Title</div>
-            <ul className="menu-list">
-              <li className="menu-item">
-                <a href="#" className="menu-link">
-                  Link 1
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="slider-btns">
-          <button>Left</button>
-          <button>Right</button>
         </div>
       </section>
     </>
