@@ -2,3 +2,63 @@
   margin-top: 50px;
   color: #000;
 }
+
+.glassmorphism-menu nav {
+  background-color: unset;
+}
+
+.glassmorphism-menu .glassmorphism-container {
+  background: linear-gradient(
+    180deg,
+    rgba(66, 66, 69, 1) 0%,
+    rgba(24, 23, 23, 1) 35%,
+    rgba(42, 42, 49, 1) 70%,
+    rgba(133, 133, 133, 1) 100%
+  );
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  position: relative;
+}
+
+.glassmorphism-menu .glassmorphism-container .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glassmorphism-menu .glassmorphism-container .header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.glassmorphism-menu .glassmorphism-container .header:hover::before {
+  left: 100%;
+}
+
+.glassmorphism-menu .glassmorphism-container .header,
+.glassmorphism-menu .glassmorphism-container .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.glassmorphism-menu .glassmorphism-container .navbar {
+  gap: 20px;
+}

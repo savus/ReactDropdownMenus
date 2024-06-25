@@ -25,7 +25,22 @@ function App() {
       </TabStateProvider> */}
       <PracticeHeader />
       <MenuSlider />
-      <section className="glassmorphism-menu">Glassmorphism</section>
+      <section className="glassmorphism-menu">
+        <div className="glassmorphism-container">
+          <header className="header">
+            <a href="#" className="logo">
+              Logo
+            </a>
+            <nav className="navbar">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Portfolio</a>
+              <a href="#">Services</a>
+              <a href="#">Contact</a>
+            </nav>
+          </header>
+        </div>
+      </section>
     </>
   );
 }
