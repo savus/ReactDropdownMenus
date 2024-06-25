@@ -1,0 +1,126 @@
+.magic-navigation-menu {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  background-color: #06021b;
+}
+
+.magic-navigation-menu .navigation {
+  position: relative;
+  width: 400px;
+  height: 70px;
+  background: linear-gradient(46deg, #2196f3, #e91e63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.magic-navigation-menu .navigation ul {
+  display: flex;
+  width: 350px;
+}
+
+.magic-navigation-menu .navigation ul li {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.magic-navigation-menu .navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.magic-navigation-menu .navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.magic-navigation-menu .navigation ul li.active a .icon {
+  transform: translateY(-38px);
+}
+
+.magic-navigation-menu .navigation ul li a .text {
+  position: absolute;
+  font-weight: 400;
+  font-size: 0.75em;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.magic-navigation-menu .navigation ul li.active a .text {
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+.magic-navigation-menu .navigation .indicator {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(46deg, #2196f3, #e91e63);
+  border: 6px solid #06021b;
+  border-radius: 50%;
+  top: -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.magic-navigation-menu .navigation .indicator::before {
+  content: "";
+  top: 50%;
+  left: -22px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 #06021b;
+}
+
+.magic-navigation-menu .navigation .indicator::after {
+  content: "";
+  top: 50%;
+  right: -22px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 #06021b;
+}
+
+.magic-navigation-menu .navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+
+.magic-navigation-menu .navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+
+.magic-navigation-menu .navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+
+.magic-navigation-menu .navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+
+.magic-navigation-menu .navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}
